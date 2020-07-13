@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seojpark <qkrtjwls8546@naver.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 17:38:51 by seojpark          #+#    #+#             */
-/*   Updated: 2020/07/13 21:13:47 by seojpark         ###   ########.fr       */
+/*   Created: 2020/07/13 21:18:28 by seojpark          #+#    #+#             */
+/*   Updated: 2020/07/13 21:21:07 by seojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_numeric(char *str)
+int	ft_str_is_lowercase(char *str)
 {
 	while (*str)
 	{
-		if (!('0' <= *str && *str <= '9'))
+		if  (!('a' <= *str && *str <= 'z'))
 			break ;
 		str++;
 	}

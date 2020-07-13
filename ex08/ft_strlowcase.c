@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seojpark <qkrtjwls8546@naver.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 17:38:51 by seojpark          #+#    #+#             */
-/*   Updated: 2020/07/13 21:13:47 by seojpark         ###   ########.fr       */
+/*   Created: 2020/07/13 22:03:32 by seojpark          #+#    #+#             */
+/*   Updated: 2020/07/13 22:13:59 by seojpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_numeric(char *str)
+char	*ft_strlowcase(char *str)
 {
-	while (*str)
+	char *temp;
+
+	temp = str;
+	while (*temp)
 	{
-		if (!('0' <= *str && *str <= '9'))
-			break ;
-		str++;
+		if(65 <= *temp && *temp <= 96)
+			temp += 32;
+		temp++;
 	}
-	if (*str)
-		return (0);
-	else
-		return (1);
+	return (str);
 }
